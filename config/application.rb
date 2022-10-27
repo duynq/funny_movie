@@ -18,5 +18,12 @@ module FunnyMovie
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.generators do |g|
+      g.test_framework :rspec
+      g.helper_specs false
+      g.controller_specs false
+      g.view_specs false
+      g.routing_specs false
+    end
   end
 end
