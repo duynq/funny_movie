@@ -1,0 +1,70 @@
+.form-video {
+  position: relative;
+  margin-top: 100px;
+  padding: 40px 20px;
+  border: 2px solid;
+  border-radius: 3px;
+  font-size: 17px;
+
+  .title {
+    position: absolute;
+    top: -20px;
+    background: white;
+    left: 10px;
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+
+  .you-url-wrap {
+    margin-bottom: 20px;
+  }
+
+  .input-form {
+    border: 2px solid black;
+    border-radius: 3px;
+    margin-right: 20px;
+  }
+
+  .button {
+    font-size: 17px;
+    border: 2px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+    -moz-box-shadow: 3px 3px #666;
+    -webkit-box-shadow: 3px 3px #666;
+    box-shadow: 3px 3px #666; 
+  }
+}
+
+.movie-container:first-child {
+  margin-top: 100px;
+}
+
+.movie-container {
+  margin-bottom: 30px;
+  .title {
+    font-weight: bold;
+    margin-bottom: 0;
+    a {
+      color: red;
+      text-decoration: none;
+    }
+  }
+
+  .email {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  .description {
+    font-size: 14px;
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 7;
+      -webkit-box-orient: vertical;
+    }
+  }
+}

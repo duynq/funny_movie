@@ -25,5 +25,11 @@ module FunnyMovie
       g.view_specs false
       g.routing_specs false
     end
+
+    config.autoload_paths += %W[#{config.root}/lib]
+    config.middleware.insert_after ActionDispatch::Flash, Warden::Manager do |manager|
+      manager.default_strategies :password_strategy
+      manager.failure_app = UnauthorizedController
+    end
   end
 end

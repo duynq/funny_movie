@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <%= link_to root_path, class: 'navbar-brand' do %>
+      <h2 class="text-warning">Funny Movie</h2>
+    <% end %>
+    <% unless signed_in? %>
+      <div class="collapse navbar-collapse justify-content-end" id="mob-navbar">
+        <%= form_with model: User.new, url: sessions_path, id: 'new_user', class: 'd-flex' do |f| %>
+          <%= f.email_field :email, required: true, class: 'form-control me-2', placeholder: 'email' %>
+          <%= f.password_field :password_digest, required: true, class: 'form-control me-2', placeholder: 'password' %>
+          <%= f.submit 'Login / Register', class: 'btn btn-warning' %>
+        <% end %>
+      </div>
+    <% else %>
+      <span><%= current_user.email %></span>
+      <%= link_to 'Share more movie', new_movie_path, class: 'btn btn-primary' %>
+      <%= link_to 'Log out', sessions_path, data: { turbo_method: :delete }, class: 'btn' %>
+    <% end %>
+  </div>
+</nav>
