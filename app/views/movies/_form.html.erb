@@ -1,0 +1,12 @@
+<div class='row justify-content-md-center'>
+  <%= form_with model: @movie, class: 'form-video col-md-6', id: 'new_movie' do |f| %>
+    <span class='title'>Share a youtube video</span>
+    <div class='row you-url-wrap'>
+      <%= f.label :youtube_url, 'Youtube URL: ', class: 'col-md-4 input-label' %>
+      <%= f.text_field :youtube_url, class: 'col-md-6 input-form' %>
+    </div>
+    <div class='row'>
+      <%= f.submit 'Share', class: 'col-md-6 offset-md-4 button' %>
+    </div>
+  <% end %>
+</div>
