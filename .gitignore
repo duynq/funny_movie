@@ -41,3 +41,5 @@
 /config/credentials/test.key
 
 /config/credentials/produciton.key
+
+config/database.yml
