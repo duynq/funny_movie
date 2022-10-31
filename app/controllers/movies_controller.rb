@@ -26,7 +26,7 @@ class MoviesController < ApplicationController
       redirect_to :root
     else
       flash[:danger] = 'Your movie is invalid'
-      redirect_to '/new'
+      render :new
     end
   end
 
