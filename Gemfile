@@ -39,3 +39,7 @@ group :test do
   gem "webdrivers"
   gem 'shoulda-matchers'
 end
+
+group :production do
+  gem 'pg'
+end
